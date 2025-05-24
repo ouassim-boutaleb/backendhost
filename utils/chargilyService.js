@@ -58,7 +58,7 @@ const createPayment = async ({
     metadata: { order_id: orderId },
     collect_shipping_address: true,
     pass_fees_to_customer: true,
-    webhook_endpoint: "backendhost-production-1804.up.railway.app/webhook",
+    webhook_endpoint: "https://backendhost-production-1804.up.railway.app/webhook",
     
   });
 
