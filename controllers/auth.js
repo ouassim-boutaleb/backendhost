@@ -38,7 +38,7 @@ const refreshToken = asyncWrapper(async (req, res) => {
   //generate the new refresh token
   res.cookie('refreshToken', storedToken.token, {
     httpOnly: true,
-    secure: true,
+    secure: process.env.NODE_ENV === "production", // Use secure cookies in production
     sameSite: 'Strict',
     maxAge: process.env.COOKIE_AGE, // 15 minutes
   });

@@ -29,7 +29,7 @@ const verifyOTP = asyncWrapper(async (req, res) => {
     const refreshToken = refreshTokenDb.token;
     res.cookie('refreshToken', refreshToken, {
         httpOnly: true,
-        secure: true, 
+        secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
         sameSite: 'Strict',
         maxAge: process.env.COOKIE_AGE, 
     });

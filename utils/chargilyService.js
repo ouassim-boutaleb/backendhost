@@ -52,8 +52,8 @@ const createPayment = async ({
 
   const checkout = await client.createCheckout({
     items: checkoutItems,
-    success_url: "https://aa13-154-121-90-19.ngrok-free.app/revenue/orders",
-    failure_url: "https://aa13-154-121-90-19.ngrok-free.app/",
+    success_url: "https://6746-154-121-16-164.ngrok-free.app/revenue/orders",
+    failure_url: "https://6746-154-121-16-164.ngrok-free.app/",
     customer_id: customer.id,
     metadata: { order_id: orderId },
     collect_shipping_address: true,

@@ -61,7 +61,7 @@ app.use(xss()); // Cleans user input
 app.use(cookieParser());
 app.use(cors(
   {
-    origin: "https://68327740ea60d8e0c9dec028--subtle-pothos-05cadd.netlify.app",
+    origin: ['http://localhost:3000','https://6746-154-121-16-164.ngrok-free.app'],
     credentials: true,
     
   }
