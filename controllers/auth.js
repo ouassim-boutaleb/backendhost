@@ -38,7 +38,6 @@ const refreshToken = asyncWrapper(async (req, res) => {
   //generate the new refresh token
   res.cookie('refreshToken', storedToken.token, {
     httpOnly: true,
-    domain: 'https://6746-154-121-16-164.ngrok-free.app',
     secure: true,
     sameSite: 'Strict',
     maxAge: process.env.COOKIE_AGE, // 15 minutes
