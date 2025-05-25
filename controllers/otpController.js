@@ -30,7 +30,7 @@ const verifyOTP = asyncWrapper(async (req, res) => {
     res.cookie('refreshToken', refreshToken, {
         httpOnly: true,
         domain: 'https://6746-154-121-16-164.ngrok-free.app',
-        secure: process.env.NODE_ENV === 'production', 
+        secure: true, 
         sameSite: 'Strict',
         maxAge: process.env.COOKIE_AGE, 
     });
